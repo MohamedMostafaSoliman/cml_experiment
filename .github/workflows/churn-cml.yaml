@@ -22,6 +22,8 @@ jobs:
             python script.py
 
       - name: Generate Report
+        env:
+            REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
             echo "## Metrics" > report.md
             cat metrics.txt >> report.md
