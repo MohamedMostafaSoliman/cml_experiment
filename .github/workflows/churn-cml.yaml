@@ -23,7 +23,7 @@ jobs:
 
       - name: Generate Report
         env:
-            REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            REPO_TOKEN: ${{ secrets.CML_SECRET }}
         run: |
             echo "## Metrics" > report.md
             cat metrics.txt >> report.md
